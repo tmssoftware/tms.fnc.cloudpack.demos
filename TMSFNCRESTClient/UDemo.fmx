@@ -1,0 +1,111 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'TMS FNC REST Client Demo'
+  ClientHeight = 476
+  ClientWidth = 374
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 286.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 0
+    Text = 'Search'
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Text = 'Delphi'
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 270.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ListBox1: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = 38.000000000000000000
+    Size.Width = 358.000000000000000000
+    Size.Height = 293.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = ListBox1ItemClick
+    Viewport.Width = 354.000000000000000000
+    Viewport.Height = 289.000000000000000000
+  end
+  object Label1: TLabel
+    Anchors = [akLeft, akRight, akBottom]
+    Position.X = 24.000000000000000000
+    Position.Y = 59.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 246.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Search for the show you want. TMSFNCCloudBase will send a messag' +
+      'e to the API and will retrieve a list of shows. Once you select ' +
+      'one of them a simple GET request will be send with the same TMSF' +
+      'NCCloudBase to retrieve the image of the show.'
+    TabOrder = 4
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Anchors = [akLeft, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = 339.000000000000000000
+    Size.Width = 136.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object TMSFNCRESTClient1: TTMSFNCRESTClient
+    Size.Width = 26.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 137.000000000000000000
+    Position.Y = 144.000000000000000000
+    Request.Host = 'https://api.tvmaze.com'
+    Request.Path = '/search/shows'
+    Request.Port = 0
+    Request.Query = 'q=Delphi'
+    Request.Method = rmGET
+    Request.QueryParameters = <
+      item
+        Value = 'Delphi'
+        Key = 'q'
+      end>
+    Request.URL = 'https://api.tvmaze.com/search/shows?q=Delphi'
+    Request.Headers = <>
+    OnRequestResponseRetrieved = TMSFNCRESTClient1RequestResponseRetrieved
+  end
+  object NameLbl: TLabel
+    Position.X = 158.000000000000000000
+    Position.Y = 339.000000000000000000
+    Text = 'Name'
+    TabOrder = 9
+  end
+  object GenresLbl: TLabel
+    Position.X = 158.000000000000000000
+    Position.Y = 364.000000000000000000
+    Text = 'Genres'
+    TabOrder = 8
+  end
+  object LanguageLbl: TLabel
+    Position.X = 158.000000000000000000
+    Position.Y = 389.000000000000000000
+    Text = 'Language'
+    TabOrder = 7
+  end
+end

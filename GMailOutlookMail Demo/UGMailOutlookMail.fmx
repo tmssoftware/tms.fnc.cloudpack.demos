@@ -1,0 +1,364 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'TMS FNC Cloud Pack Mail Demo'
+  ClientHeight = 604
+  ClientWidth = 962
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 962.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object edClientID: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 112.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edSecret: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 112.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 17.000000000000000000
+      TextSettings.Trimming = None
+      Text = 'Client ID'
+      TabOrder = 6
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 46.000000000000000000
+      TextSettings.Trimming = None
+      Text = 'Secret'
+      TabOrder = 4
+    end
+    object edCallback: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 112.000000000000000000
+      Position.Y = 76.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 76.000000000000000000
+      TextSettings.Trimming = None
+      Text = 'Callback URL'
+      TabOrder = 2
+    end
+    object Label4: TLabel
+      Position.X = 409.000000000000000000
+      Position.Y = 17.000000000000000000
+      TextSettings.Trimming = None
+      Text = 'Service'
+      TabOrder = 5
+    end
+    object TMSFNCCloudMicrosoftOutlookMail1: TTMSFNCCloudMicrosoftOutlookMail
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 815.000000000000000000
+      Position.Y = 21.000000000000000000
+      OnConnected = TMSFNCCloudMicrosoftOutlookMail1Connected
+      OnGetMails = TMSFNCCloudMicrosoftOutlookMail1GetMails
+      OnSendMessage = TMSFNCCloudMicrosoftOutlookMail1SendMessage
+      Mails = <>
+      Folders = <>
+    end
+    object btConnect: TButton
+      Position.X = 409.000000000000000000
+      Position.Y = 76.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Connect'
+      TextSettings.Trimming = None
+      OnClick = btConnectClick
+    end
+    object cbService: TComboBox
+      Items.Strings = (
+        'GMail'
+        'Outlook Mail')
+      ItemIndex = 1
+      Position.X = 409.000000000000000000
+      Position.Y = 46.000000000000000000
+      TabOrder = 9
+    end
+    object TMSFNCCloudGoogleGmail1: TTMSFNCCloudGoogleGmail
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 616.000000000000000000
+      Position.Y = 21.000000000000000000
+      OnConnected = TMSFNCCloudGoogleGmail1Connected
+      Mails = <>
+      OnSendMessage = TMSFNCCloudGoogleGmail1SendMessage
+      OnGetMailsComplete = TMSFNCCloudGoogleGmail1GetMailsComplete
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 962.000000000000000000
+    Size.Height = 491.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = Top
+    Sizes = (
+      962s
+      465s
+      962s
+      465s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 50.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Inbox'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Panel2: TPanel
+        Align = Client
+        Size.Width = 705.000000000000000000
+        Size.Height = 465.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object lbSubject: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 689.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = 'Subject'
+          TabOrder = 1
+        end
+        object WebBrowser1: TWebBrowser
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Size.Width = 689.000000000000000000
+          Size.Height = 393.000000000000000000
+          Size.PlatformDefault = False
+          Position.X = 8.000000000000000000
+          Position.Y = 64.000000000000000000
+          WindowsEngine = IEOnly
+        end
+        object lbFrom: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 8.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 689.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = 'From'
+          TabOrder = 0
+        end
+      end
+      object Panel3: TPanel
+        Align = Left
+        Size.Width = 257.000000000000000000
+        Size.Height = 465.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Label5: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          TextSettings.Trimming = None
+          Text = 'Inbox'
+          TabOrder = 0
+        end
+        object lbMails: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Position.X = 8.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 416.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnClick = lbMailsClick
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 237.000000000000000000
+          Viewport.Height = 412.000000000000000000
+        end
+        object btRefresh: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 169.000000000000000000
+          Position.Y = 11.000000000000000000
+          TabOrder = 3
+          Text = 'Refresh'
+          TextSettings.Trimming = None
+          OnClick = btRefreshClick
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 70.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'New Mail'
+      ExplicitSize.cx = 71.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Panel4: TPanel
+        Align = Left
+        Size.Width = 441.000000000000000000
+        Size.Height = 465.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label7: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          TextSettings.Trimming = None
+          Text = 'To'
+          TabOrder = 1
+        end
+        object Label8: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 38.000000000000000000
+          TextSettings.Trimming = None
+          Text = 'Subject'
+          TabOrder = 0
+        end
+        object edTo: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 3
+          Position.X = 64.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 369.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object edSubject: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 2
+          Text = 'TMS FNC Cloud Pack Mail Demo'
+          Position.X = 64.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 369.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object meBody: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Lines.Strings = (
+            '<h1>Hello World</h1>'
+            'This is a <b>TMS FNC Cloud Pack</b> test mail.'
+            '<br><br>')
+          OnChangeTracking = meBodyChangeTracking
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Position.X = 8.000000000000000000
+          Position.Y = 98.000000000000000000
+          Size.Width = 425.000000000000000000
+          Size.Height = 329.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Viewport.Width = 421.000000000000000000
+          Viewport.Height = 325.000000000000000000
+        end
+        object btInsertImage: TButton
+          Position.X = 8.000000000000000000
+          Position.Y = 435.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = 'Insert Image'
+          TextSettings.Trimming = None
+          OnClick = btInsertImageClick
+        end
+        object btSend: TButton
+          Anchors = [akRight, akBottom]
+          Position.X = 353.000000000000000000
+          Position.Y = 435.000000000000000000
+          TabOrder = 6
+          Text = 'Send'
+          TextSettings.Trimming = None
+          OnClick = btSendClick
+        end
+        object Label9: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 73.000000000000000000
+          TextSettings.Trimming = None
+          Text = 'Body (HTML accepted)'
+          TabOrder = 7
+        end
+        object btClearImages: TButton
+          Position.X = 96.000000000000000000
+          Position.Y = 435.000000000000000000
+          TabOrder = 8
+          Text = 'Clear Images'
+          TextSettings.Trimming = None
+          OnClick = btClearImagesClick
+        end
+      end
+      object Panel5: TPanel
+        Align = Client
+        Size.Width = 521.000000000000000000
+        Size.Height = 465.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object WebBrowser2: TWebBrowser
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Size.Width = 505.000000000000000000
+          Size.Height = 425.000000000000000000
+          Size.PlatformDefault = False
+          Position.X = 8.000000000000000000
+          Position.Y = 32.000000000000000000
+          WindowsEngine = IEOnly
+        end
+        object Label6: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 505.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = 'Preview (Note: Appearance may vary by email client.)'
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 776
+    Top = 72
+  end
+end

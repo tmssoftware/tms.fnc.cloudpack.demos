@@ -1,0 +1,142 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'AI image processing'
+  ClientHeight = 706
+  ClientWidth = 1052
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TMSFNCImage1: TTMSFNCImage
+    Align = Client
+    Size.Width = 515.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Bitmaps = <>
+    Stretch = True
+    Fill.Kind = gfkNone
+    Stroke.Kind = gskNone
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 
+      'JPEG files|*.jpg|PNG files|*.png|WebP files|*.webp|All image fil' +
+      'es|*.*'
+    Left = 896
+    Top = 8
+  end
+  object TMSFNCRichEditor1: TTMSFNCRichEditor
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Right
+    BorderStyle = bsNone
+    Cursor = crIBeam
+    Font.Size = 14.000000000000000000
+    Position.X = 523.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Version = '1.8.10.2'
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 960
+    Top = 8
+  end
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 1052.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    object Button1: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 11.000000000000000000
+      TabOrder = 1
+      Text = 'Open'
+      OnClick = Button1Click
+    end
+    object Button3: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 525.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Extract text from picture'
+      OnClick = Button3Click
+    end
+    object TMSFNCCloudAI1: TTMSFNCCloudAI
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 792.000000000000000000
+      Position.Y = 15.000000000000000000
+      Service = aiOpenAI
+      Settings.GeminiModel = 'gemini-1.5-flash-latest'
+      Settings.OpenAIModel = 'gpt-4o'
+      Settings.OpenAISoundModel = 'gpt-4o-mini-tts'
+      Settings.OpenAITranscribeModel = 'whisper-1'
+      Settings.GrokModel = 'grok-3'
+      Settings.ClaudeModel = 'claude-3-5-sonnet-20241022'
+      Settings.OllamaModel = 'llama3.2:latest'
+      Settings.DeepSeekModel = 'deepseek-chat'
+      Settings.PerplexityModel = 'llama-3.1-sonar-small-128k-online'
+      Settings.OllamaHost = 'localhost'
+      Settings.OllamaPath = '/api/chat'
+      Settings.LlamaCppHost = 'localhost'
+      Settings.LlamaCppPath = '/v1/chat/completions'
+      Settings.MistralModel = 'mistral-large-latest'
+      Settings.MistralTranscribeModel = 'voxtral-mini-2507'
+      Tools = <>
+      OnExecuted = TMSFNCCloudAI1Executed
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 665.000000000000000000
+    Size.Width = 1052.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        'OpenAI'
+        'Claude'
+        'Gemini')
+      ItemIndex = 0
+      Position.X = 8.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      OnChange = ComboBox1Change
+    end
+    object ProgressBar1: TProgressBar
+      Anchors = [akLeft, akTop, akRight]
+      Orientation = Horizontal
+      Position.X = 168.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 873.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Right
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 515.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 8.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

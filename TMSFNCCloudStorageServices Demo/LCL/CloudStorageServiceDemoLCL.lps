@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="CloudStorageServiceDemoLCL.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="39" Y="19"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="162"/>
+        <CursorPos X="26" Y="180"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\LCLTMSFNCCloudOAuth.pas"/>
+        <TopLine Value="18"/>
+        <CursorPos X="30" Y="35"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1400"/>
+        <CursorPos X="22" Y="1414"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\LCLTMSFNCCloudStorageServices.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="334"/>
+        <CursorPos X="49" Y="350"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\LCLTMSFNCCloudGoogleAnalytics.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="159"/>
+        <CursorPos X="49" Y="176"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\LCLTMSFNCCloudSumUp.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="312"/>
+        <CursorPos Y="312"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\TMS FNC Core\LCLTMSFNCGraphicsTypes.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="15"/>
+        <CursorPos X="42" Y="31"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="..\..\..\LCLTMSFNCCloudOAuth.pas"/>
+        <Caret Line="35" Column="30" TopLine="18"/>
+      </Position1>
+      <Position2>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <Caret Line="335" Column="44" TopLine="315"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\..\LCLTMSFNCCloudOAuth.pas"/>
+        <Caret Line="35" Column="30" TopLine="18"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <Caret Line="1393" Column="35" TopLine="1392"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <Caret Line="1416" Column="48" TopLine="1392"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <Caret Line="1406" Column="51" TopLine="1391"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\..\..\LCLTMSFNCCloudBox.pas"/>
+        <Caret Line="1414" Column="22" TopLine="1400"/>
+      </Position7>
+      <Position8>
+        <Filename Value="..\..\..\LCLTMSFNCCloudStorageServices.pas"/>
+        <Caret Line="324" TopLine="307"/>
+      </Position8>
+      <Position9>
+        <Filename Value="..\..\..\LCLTMSFNCCloudStorageServices.pas"/>
+        <Caret Line="317" Column="53" TopLine="307"/>
+      </Position9>
+      <Position10>
+        <Filename Value="..\..\..\LCLTMSFNCCloudStorageServices.pas"/>
+        <Caret Line="350" Column="49" TopLine="334"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="95" Column="74" TopLine="89"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="97" Column="13" TopLine="78"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="95" Column="25" TopLine="81"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="55" Column="29" TopLine="44"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="56" Column="20" TopLine="40"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="96" Column="28" TopLine="68"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="117" Column="23" TopLine="89"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="56" Column="36" TopLine="29"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="175" Column="26" TopLine="147"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="183" Column="47" TopLine="162"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="100" Column="18" TopLine="79"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="108" Column="53" TopLine="91"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="109" Column="5" TopLine="94"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ucloudstorageservicedemolcl.pas"/>
+        <Caret Line="180" Column="26" TopLine="162"/>
+      </Position25>
+      <Position26>
+        <Filename Value="CloudStorageServiceDemoLCL.lpr"/>
+        <Caret Line="19" Column="39"/>
+      </Position26>
+      <Position27>
+        <Filename Value="..\..\..\LCLTMSFNCCloudGoogleAnalytics.pas"/>
+        <Caret Line="176" Column="49" TopLine="159"/>
+      </Position27>
+      <Position28>
+        <Filename Value="..\..\..\LCLTMSFNCCloudSumUp.pas"/>
+        <Caret Line="312" TopLine="312"/>
+      </Position28>
+      <Position29>
+        <Filename Value="..\..\..\..\TMS FNC Core\LCLTMSFNCGraphicsTypes.pas"/>
+        <Caret Line="693" Column="29" TopLine="679"/>
+      </Position29>
+      <Position30>
+        <Filename Value="..\..\..\..\TMS FNC Core\LCLTMSFNCGraphicsTypes.pas"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

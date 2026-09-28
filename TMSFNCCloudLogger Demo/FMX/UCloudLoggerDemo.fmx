@@ -1,0 +1,453 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Cloud logger Demo'
+  ClientHeight = 855
+  ClientWidth = 727
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Enabled = False
+    Position.X = 24.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'GetProjects'
+    OnClick = Button1Click
+  end
+  object Button3: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Connect'
+    OnClick = Button3Click
+  end
+  object ListBox1: TListBox
+    Position.X = 24.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 153.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnChange = ListBox1Change
+    Viewport.Width = 269.000000000000000000
+    Viewport.Height = 149.000000000000000000
+  end
+  object Button4: TButton
+    Enabled = False
+    Position.X = 545.000000000000000000
+    Position.Y = 326.000000000000000000
+    Size.Width = 160.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Log Message'
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Enabled = False
+    Position.X = 24.000000000000000000
+    Position.Y = 408.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    Text = 'GetStacks'
+    OnClick = Button5Click
+  end
+  object RadioExc: TRadioButton
+    GroupName = 'service'
+    IsChecked = True
+    Position.X = 24.000000000000000000
+    Position.Y = 24.000000000000000000
+    TabOrder = 15
+    Text = 'Exceptionless.io'
+    OnClick = RadioExcClick
+  end
+  object RadioSentry: TRadioButton
+    GroupName = 'service'
+    Position.X = 24.000000000000000000
+    Position.Y = 56.000000000000000000
+    TabOrder = 14
+    Text = 'Sentry'
+    OnClick = RadioSentryClick
+  end
+  object RadioRollbar: TRadioButton
+    GroupName = 'service'
+    Position.X = 24.000000000000000000
+    Position.Y = 88.000000000000000000
+    TabOrder = 13
+    Text = 'Rollbar'
+    OnClick = RadioRollbarClick
+  end
+  object Label1: TLabel
+    Position.X = 160.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Email:'
+    TabOrder = 24
+  end
+  object ExcMail: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 25
+    Position.X = 320.000000000000000000
+    Position.Y = 20.000000000000000000
+  end
+  object Label2: TLabel
+    Position.X = 440.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Password:'
+    TabOrder = 16
+  end
+  object ExcPassword: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 17
+    Password = True
+    Position.X = 536.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label3: TLabel
+    Position.X = 160.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Account Token:'
+    TabOrder = 22
+  end
+  object SentryToken: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 23
+    Position.X = 320.000000000000000000
+    Position.Y = 52.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = SentryTokenChange
+  end
+  object Label4: TLabel
+    Position.X = 160.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Account Token:'
+    TabOrder = 20
+  end
+  object RollbarToken: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 21
+    Position.X = 320.000000000000000000
+    Position.Y = 84.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = RollbarTokenChange
+  end
+  object ListBox2: TListBox
+    Position.X = 24.000000000000000000
+    Position.Y = 440.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnChange = ListBox2Change
+    Viewport.Width = 269.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+  object ListBox3: TListBox
+    Position.X = 24.000000000000000000
+    Position.Y = 656.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 177.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnChange = ListBox3Change
+    Viewport.Width = 269.000000000000000000
+    Viewport.Height = 173.000000000000000000
+  end
+  object Button2: TButton
+    Enabled = False
+    Position.X = 24.000000000000000000
+    Position.Y = 624.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    Text = 'Get Events'
+    OnClick = Button2Click
+  end
+  object MsgEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 27
+    Text = 'Test Message'
+    Position.X = 328.000000000000000000
+    Position.Y = 266.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label5: TLabel
+    Position.X = 328.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Message:'
+    TabOrder = 19
+  end
+  object Label6: TLabel
+    Position.X = 328.000000000000000000
+    Position.Y = 298.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Level:'
+    TabOrder = 18
+  end
+  object ComboBox1: TComboBox
+    Items.Strings = (
+      'Debug'
+      'Info'
+      'Warning'
+      'Fatal')
+    ItemIndex = 1
+    Position.X = 544.000000000000000000
+    Position.Y = 296.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 28
+  end
+  object Button6: TButton
+    Enabled = False
+    Position.X = 545.000000000000000000
+    Position.Y = 364.000000000000000000
+    Size.Width = 160.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Log Exception'
+    OnClick = Button6Click
+  end
+  object EIdLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 656.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 45
+  end
+  object ELvlLbl: TLabel
+    Position.X = 616.000000000000000000
+    Position.Y = 656.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 39
+  end
+  object ETitleLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 680.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    TabOrder = 35
+  end
+  object EMsgMemo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 320.000000000000000000
+    Position.Y = 712.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 46
+    Visible = False
+    Viewport.Width = 385.000000000000000000
+    Viewport.Height = 65.000000000000000000
+  end
+  object EIPLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 784.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 40
+  end
+  object EDateLbl: TLabel
+    Position.X = 520.000000000000000000
+    Position.Y = 784.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 36
+  end
+  object ESrcLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 808.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    TabOrder = 31
+  end
+  object SIdLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 474.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 44
+  end
+  object SLvlLbl: TLabel
+    Position.X = 584.000000000000000000
+    Position.Y = 474.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 38
+  end
+  object STitleLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 440.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    TabOrder = 32
+  end
+  object SFirstLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 528.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 37
+  end
+  object SLastLbl: TLabel
+    Position.X = 528.000000000000000000
+    Position.Y = 528.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 34
+  end
+  object SStatusLbl: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 592.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 30
+  end
+  object STotOccLbl: TLabel
+    Position.X = 528.000000000000000000
+    Position.Y = 592.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Trailing
+    TabOrder = 33
+  end
+  object Label7: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 504.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'First:'
+    Visible = False
+    TabOrder = 43
+  end
+  object Label8: TLabel
+    Position.X = 528.000000000000000000
+    Position.Y = 504.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Last:'
+    Visible = False
+    TabOrder = 42
+  end
+  object Label9: TLabel
+    Position.X = 320.000000000000000000
+    Position.Y = 568.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Status:'
+    Visible = False
+    TabOrder = 29
+  end
+  object Label10: TLabel
+    Position.X = 528.000000000000000000
+    Position.Y = 568.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Total Occurences:'
+    Visible = False
+    TabOrder = 41
+  end
+  object Button7: TButton
+    Enabled = False
+    Position.X = 333.000000000000000000
+    Position.Y = 364.000000000000000000
+    Size.Width = 160.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Log Exception'
+    OnClick = Button7Click
+  end
+  object l: TTMSFNCCloudLogger
+    Size.Width = 26.000000000000000000
+    Size.Height = 26.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 24.000000000000000000
+    Position.Y = 128.000000000000000000
+    Service = lsExceptionless
+    OnConnected = lConnected
+    OnGetAllEvents = DoGetAllEvents
+    OnGetAllProjects = DoGetAllProjects
+    OnGetAllStacks = DoGetAllStacks
+  end
+end

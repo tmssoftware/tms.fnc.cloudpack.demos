@@ -1,0 +1,405 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  ActiveControl = TabItem1
+  Caption = 'FNC Cloud File Conversion Demo'
+  ClientHeight = 384
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object OpenDialog1: TOpenDialog
+    Left = 528
+    Top = 64
+  end
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 384.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 384.000000000000000000
+    object Panel_Service: TPanel
+      Align = Top
+      Size.Width = 640.000000000000000000
+      Size.Height = 109.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Edit_API: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 3
+        Position.X = 136.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 473.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChangeTracking = Edit_APIChangeTracking
+      end
+      object LblAPI: TLabel
+        Position.X = 36.000000000000000000
+        Position.Y = 64.000000000000000000
+        Text = 'API Key:'
+        TabOrder = 4
+      end
+      object Rad_CloudConvert: TRadioButton
+        GroupName = 'service'
+        IsChecked = True
+        Position.X = 36.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 1
+        Text = 'CloudConvert'
+        OnChange = Rad_CloudConvertChange
+      end
+      object Rad_Zamzar: TRadioButton
+        GroupName = 'service'
+        Position.X = 192.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 0
+        Text = 'Zamzar'
+        OnChange = Rad_ZamzarChange
+      end
+      object Rad_ConvertIO: TRadioButton
+        GroupName = 'service'
+        Position.X = 311.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 2
+        Text = 'ConvertIO'
+        OnChange = Rad_ConvertIOChange
+      end
+      object Label_API: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Family, Size]
+        HitTest = True
+        Position.X = 536.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {04040000000000000004000000}
+        TextSettings.FontColor = claCornflowerblue
+        TextSettings.HorzAlign = Trailing
+        TextSettings.Trimming = None
+        Text = 'Get API Key'
+        TabOrder = 5
+        OnClick = Label_APIClick
+      end
+      object Label1: TLabel
+        Position.X = 26.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'Choose REST API:'
+        TabOrder = 13
+      end
+    end
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 275.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 0
+      TabOrder = 1
+      TabPosition = PlatformDefault
+      Sizes = (
+        640s
+        249s
+        640s
+        249s)
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 83.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Convert File'
+        ExplicitSize.cx = 83.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Panel_Input: TPanel
+          Align = Top
+          Size.Width = 640.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Edit_Url: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 5
+            Position.X = 136.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 473.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = Edit_UrlChange
+          end
+          object Label2: TLabel
+            Position.X = 26.000000000000000000
+            Position.Y = 8.000000000000000000
+            Text = 'Select Input:'
+            TabOrder = 14
+          end
+          object Rad_Url: TRadioButton
+            GroupName = 'conertType'
+            IsChecked = True
+            Position.X = 36.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 92.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 18
+            Text = 'Url'
+            OnChange = Rad_UrlChange
+          end
+          object Rad_File: TRadioButton
+            GroupName = 'conertType'
+            Position.X = 36.000000000000000000
+            Position.Y = 76.000000000000000000
+            Size.Width = 92.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 17
+            Text = 'File'
+            OnChange = Rad_FileChange
+          end
+          object Edit_SelFile: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 4
+            Position.X = 136.000000000000000000
+            Position.Y = 76.000000000000000000
+            Size.Width = 385.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = Edit_SelFileChange
+          end
+          object Btn_Dialog: TButton
+            Position.X = 529.000000000000000000
+            Position.Y = 76.000000000000000000
+            TabOrder = 21
+            Text = 'Open File'
+            OnClick = Btn_DialogClick
+          end
+        end
+        object Panel_Convert: TPanel
+          Align = Client
+          Size.Width = 640.000000000000000000
+          Size.Height = 129.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object Combo_Output: TComboBox
+            Items.Strings = (
+              '3g2'
+              '3gp'
+              '7z'
+              'aac'
+              'ac3'
+              'ai'
+              'aiff'
+              'avi'
+              'azw3'
+              'bmp'
+              'cab'
+              'cdr'
+              'csv'
+              'djvu'
+              'doc'
+              'docm'
+              'docx'
+              'dxf'
+              'emf'
+              'eps'
+              'epub'
+              'fb2'
+              'flac'
+              'flv'
+              'gif'
+              'jpg'
+              'lrf'
+              'm4a'
+              'm4v'
+              'mkv'
+              'mobi'
+              'mod'
+              'mov'
+              'mp3'
+              'mp4'
+              'mpg'
+              'mts'
+              'odp'
+              'odt'
+              'ogg'
+              'pdb'
+              'pdf'
+              'png'
+              'pps'
+              'ppsx'
+              'ppt'
+              'pptm'
+              'pptx'
+              'prc'
+              'ps'
+              'psd'
+              'rar'
+              'rb'
+              'rm'
+              'rmvb'
+              'rtf'
+              'svg'
+              'tar'
+              'tcr'
+              'tiff'
+              'ts'
+              'txt'
+              'vob'
+              'wav'
+              'webm'
+              'webp'
+              'wma'
+              'wmf'
+              'wmv'
+              'wps'
+              'xls'
+              'xlsx'
+              'xps'
+              'zip')
+            Position.X = 136.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 159.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            OnChange = Combo_OutputChange
+          end
+          object LblOutput: TLabel
+            Position.X = 26.000000000000000000
+            Position.Y = 12.000000000000000000
+            Size.Width = 102.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Output Format:'
+            TabOrder = 12
+          end
+          object Btn_Convert: TButton
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Position.X = 136.000000000000000000
+            Position.Y = 41.000000000000000000
+            Size.Width = 473.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 14
+            Text = 'Convert'
+            OnClick = Btn_ConvertClick
+          end
+          object Label_Status: TLabel
+            Anchors = [akLeft, akRight, akBottom]
+            StyledSettings = [Family, Size, Style]
+            Position.X = 136.000000000000000000
+            Position.Y = 97.000000000000000000
+            Size.Width = 473.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claDarkgray
+            Text = '(Convert Status)'
+            TabOrder = 15
+          end
+        end
+      end
+      object TabItem2: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 137.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Previous Convert Jobs'
+        ExplicitSize.cx = 137.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Panel_List: TPanel
+          Align = Client
+          Size.Width = 640.000000000000000000
+          Size.Height = 249.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Btn_JobList: TButton
+            Position.X = 26.000000000000000000
+            Position.Y = 168.000000000000000000
+            Size.Width = 455.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Get Existing Convert Jobs'
+            OnClick = Btn_JobListClick
+          end
+          object Btn_JobDetails: TButton
+            Enabled = False
+            Position.X = 489.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 27.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Text = 'Job Details'
+            OnClick = Btn_JobDetailsClick
+          end
+          object Btn_Download: TButton
+            Enabled = False
+            Position.X = 489.000000000000000000
+            Position.Y = 46.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+            Text = 'Save Job Files'
+            OnClick = Btn_DownloadClick
+          end
+          object ListBox_Jobs: TTMSFNCCloudDemoListBox
+            Position.X = 26.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 455.000000000000000000
+            Size.Height = 152.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+            Items = <
+              item
+                Bitmaps = <>
+              end>
+          end
+          object Lbl_Error: TLabel
+            StyledSettings = [Family, Size, Style]
+            Position.X = 26.000000000000000000
+            Position.Y = 198.000000000000000000
+            Size.Width = 583.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claRed
+            TabOrder = 11
+          end
+        end
+      end
+    end
+  end
+  object TMSFNCCloudFileConversion1: TTMSFNCCloudFileConversion
+    Size.Width = 39.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 578.000000000000000000
+    Position.Y = 52.000000000000000000
+    OnConvertJobCreated = TMSFNCCloudFileConversion1ConvertJobCreated
+    OnGetConvertJobDetails = TMSFNCCloudFileConversion1GetConvertJobDetails
+    OnFileDownloadedToFile = TMSFNCCloudFileConversion1FileDownloadedToFile
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 24
+    Top = 328
+  end
+end

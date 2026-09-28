@@ -1,0 +1,106 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Google Calendar with Promises'
+  ClientHeight = 630
+  ClientWidth = 356
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Authenticate'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object ListBox1: TListBox
+    Position.X = 8.000000000000000000
+    Position.Y = 138.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 207.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnChange = ListBox1Change
+    Viewport.Width = 333.000000000000000000
+    Viewport.Height = 203.000000000000000000
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 113.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Available calendars'
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 360.000000000000000000
+    Text = 'Events'
+    TabOrder = 4
+  end
+  object ListBox2: TListBox
+    Position.X = 8.000000000000000000
+    Position.Y = 385.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 238.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 333.000000000000000000
+    Viewport.Height = 234.000000000000000000
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'ClientID'
+    TabOrder = 6
+  end
+  object Label4: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 42.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Secret'
+    TabOrder = 7
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Position.X = 73.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Position.X = 57.000000000000000000
+    Position.Y = 42.000000000000000000
+    Size.Width = 288.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

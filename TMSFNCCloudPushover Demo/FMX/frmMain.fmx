@@ -1,0 +1,70 @@
+object Form5: TForm5
+  Left = 0
+  Top = 0
+  Caption = 'TTMSFNCCloudPushOver Demo'
+  ClientHeight = 360
+  ClientWidth = 462
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TMSFNCCloudPushOver1: TTMSFNCCloudPushOver
+    Size.Width = 39.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 8.000000000000000000
+    Position.Y = 321.000000000000000000
+    OnPushError = TMSFNCCloudPushOver1PushError
+    OnPushSucces = TMSFNCCloudPushOver1PushSucces
+  end
+  object APIKey: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 2
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 446.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'API Key'
+  end
+  object User: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Position.X = 8.000000000000000000
+    Position.Y = 38.000000000000000000
+    Size.Width = 446.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'User / group key'
+  end
+  object MessageContent: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Hello World!'
+      ''
+      'Welcome to the PushOver API.')
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 8.000000000000000000
+    Position.Y = 68.000000000000000000
+    Size.Width = 446.000000000000000000
+    Size.Height = 205.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 442.000000000000000000
+    Viewport.Height = 201.000000000000000000
+  end
+  object Push: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 8.000000000000000000
+    Position.Y = 281.000000000000000000
+    Size.Width = 446.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Push Message'
+    OnClick = PushClick
+  end
+end

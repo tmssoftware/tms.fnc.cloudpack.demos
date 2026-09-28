@@ -1,0 +1,233 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'TMS FNC Cloud Storage Services Demo'
+  ClientHeight = 624
+  ClientWidth = 692
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Top
+    Size.Width = 692.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Client ID'
+      TabOrder = 18
+    end
+    object edClientID: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 19
+      Position.X = 96.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 281.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label6: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 94.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Secret'
+      TabOrder = 14
+    end
+    object edSecret: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 15
+      Position.X = 96.000000000000000000
+      Position.Y = 90.000000000000000000
+      Size.Width = 281.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label7: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Callback URL'
+      TabOrder = 16
+    end
+    object edCallbackURL: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 17
+      Position.X = 96.000000000000000000
+      Position.Y = 123.000000000000000000
+      Size.Width = 281.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Service'
+      TabOrder = 0
+    end
+    object cbStorageService: TComboBox
+      Items.Strings = (
+        'Box'
+        'DropBox'
+        'Google Drive'
+        'OneDrive'
+        'Hubic')
+      ItemIndex = 2
+      Position.X = 96.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = cbStorageServiceChange
+    end
+    object btConnect: TButton
+      Position.X = 296.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 2
+      Text = 'Connect'
+      TextSettings.Trimming = None
+      OnClick = btConnectClick
+    end
+    object Button1: TButton
+      Position.X = 392.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 20
+      Text = 'Disconnect'
+      TextSettings.Trimming = None
+      OnClick = Button1Click
+    end
+  end
+  object TMSFNCCloudDemoListBox1: TTMSFNCCloudDemoListBox
+    Align = Left
+    Position.Y = 193.000000000000000000
+    Size.Width = 369.000000000000000000
+    Size.Height = 431.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Items = <>
+  end
+  object Panel1: TPanel
+    Align = Top
+    Position.Y = 161.000000000000000000
+    Size.Width = 692.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object lPath: TLabel
+      Anchors = [akLeft, akTop, akRight]
+      Position.X = 56.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'root'
+      TabOrder = 14
+    end
+    object Label3: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Path:'
+      TabOrder = 16
+    end
+  end
+  object Panel3: TPanel
+    Align = Client
+    Size.Width = 323.000000000000000000
+    Size.Height = 431.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object TMSFNCCloudStorageServices1: TTMSFNCCloudStorageServices
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 263.000000000000000000
+      Position.Y = -73.000000000000000000
+      Service = cssBox
+      OnConnected = TMSFNCCloudStorageServices1Connected
+      OnGetFolderList = TMSFNCCloudStorageServices1GetFolderList
+      OnCreateFolder = TMSFNCCloudStorageServices1CreateFolder
+      OnUploadFile = TMSFNCCloudStorageServices1UploadFile
+      OnDeleteItem = TMSFNCCloudStorageServices1DeleteItem
+    end
+    object btUpload: TButton
+      Position.X = 113.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 4
+      Text = 'Upload'
+      TextSettings.Trimming = None
+      OnClick = btUploadClick
+    end
+    object edCreateFolder: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 16.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btCreateFolder: TButton
+      Position.X = 209.000000000000000000
+      Position.Y = 56.000000000000000000
+      TabOrder = 6
+      Text = 'Create Folder'
+      TextSettings.Trimming = None
+      OnClick = btCreateFolderClick
+    end
+    object btDelete: TButton
+      Position.X = 208.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 8
+      Text = 'Delete'
+      TextSettings.Trimming = None
+      OnClick = btDeleteClick
+    end
+    object btDownload: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 3
+      Text = 'Download'
+      TextSettings.Trimming = None
+      OnClick = btDownloadClick
+    end
+    object btOpenFolder: TButton
+      Position.X = 113.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 7
+      Text = 'Open Folder'
+      TextSettings.Trimming = None
+      OnClick = btOpenFolderClick
+    end
+    object btRootFolder: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Root'
+      TextSettings.Trimming = None
+      OnClick = btRootFolderClick
+    end
+  end
+end

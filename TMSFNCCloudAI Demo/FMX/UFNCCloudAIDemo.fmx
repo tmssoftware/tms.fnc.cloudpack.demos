@@ -1,0 +1,401 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'TMS FNC Cloud Pack: TMS FNC Cloud AI Demo'
+  ClientHeight = 709
+  ClientWidth = 644
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 644.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label4: TLabel
+      StyledSettings = [Family, Size, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.Trimming = None
+      Text = 'TMS FNC Cloud AI Demo'
+      TabOrder = 10
+    end
+    object Label5: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'API Keys'
+      TabOrder = 9
+    end
+    object Label7: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Claude'
+      TabOrder = 8
+    end
+    object Label9: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 148.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'OpenAI'
+      TabOrder = 3
+    end
+    object Label10: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 178.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Perplexity'
+      TabOrder = 2
+    end
+    object Label8: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 118.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Grok'
+      TabOrder = 1
+    end
+    object Label6: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 58.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Gemini'
+      TabOrder = 0
+      object edGemini: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Position.X = 73.000000000000000000
+        Size.Width = 550.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object edClaude: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 7
+      Position.X = 81.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 550.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edGrok: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 82.000000000000000000
+      Position.Y = 118.000000000000000000
+      Size.Width = 550.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edOpenAI: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 82.000000000000000000
+      Position.Y = 148.000000000000000000
+      Size.Width = 550.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edPerplexity: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.X = 81.000000000000000000
+      Position.Y = 178.000000000000000000
+      Size.Width = 550.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object TMSFNCCloudAI1: TTMSFNCCloudAI
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 606.000000000000000000
+      Position.Y = 8.000000000000000000
+      Service = aiOpenAI
+      Settings.GeminiModel = 'gemini-1.5-flash-latest:generateContent'
+      Settings.OpenAIModel = 'gpt-4o'
+      Settings.GrokModel = 'grok-beta'
+      Settings.ClaudeModel = 'claude-3-5-sonnet-20241022'
+      Settings.OllamaModel = 'llama3.2:latest'
+      Settings.PerplexityModel = 'llama-3.1-sonar-small-128k-online'
+      Settings.OllamaHost = 'localhost'
+    end
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 644.000000000000000000
+    Size.Height = 476.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object meResponse: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 8.000000000000000000
+      Position.Y = 285.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 193.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 620.000000000000000000
+      Viewport.Height = 189.000000000000000000
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 210.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Service'
+      TabOrder = 10
+    end
+    object cbService: TComboBox
+      Items.Strings = (
+        'OpenAI'
+        'Grok'
+        'Gemini'
+        'Claude'
+        'Perplexity'
+        'Ollama'
+        'Mistral')
+      ItemIndex = 0
+      Position.X = 78.000000000000000000
+      Position.Y = 210.000000000000000000
+      Size.Width = 201.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object btSubmit: TButton
+      Position.X = 287.000000000000000000
+      Position.Y = 210.000000000000000000
+      TabOrder = 2
+      Text = 'Submit'
+      TextSettings.Trimming = None
+      OnClick = btSubmitClick
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 63.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Response'
+      TabOrder = 8
+    end
+    object lbResponseCode: TLabel
+      Position.X = 65.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 12
+    end
+    object TabControl1: TTabControl
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 623.000000000000000000
+      Size.Height = 177.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 0
+      TabOrder = 15
+      TabPosition = PlatformDefault
+      Sizes = (
+        623s
+        151s
+        623s
+        151s
+        623s
+        151s)
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        TextSettings.Trimming = None
+        IsSelected = True
+        Size.Width = 62.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Context'
+        ExplicitSize.cx = 62.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object meContext: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Lines.Strings = (
+            'What do you know about Delphi')
+          Align = Client
+          Size.Width = 623.000000000000000000
+          Size.Height = 151.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 619.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object TabItem2: TTabItem
+        CustomIcon = <
+          item
+          end>
+        TextSettings.Trimming = None
+        IsSelected = False
+        Size.Width = 94.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Assistant Role'
+        ExplicitSize.cx = 94.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object meAssistantRole: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 623.000000000000000000
+          Size.Height = 151.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 619.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object TabItem3: TTabItem
+        CustomIcon = <
+          item
+          end>
+        TextSettings.Trimming = None
+        IsSelected = False
+        Size.Width = 84.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'System Role'
+        ExplicitSize.cx = 84.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object meSystemRole: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 623.000000000000000000
+          Size.Height = 151.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 619.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+    end
+    object Label3: TLabel
+      Position.X = 106.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Prompt Tokens'
+      TabOrder = 7
+    end
+    object lbPromptTokens: TLabel
+      Position.X = 194.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 16
+    end
+    object Label11: TLabel
+      Position.X = 235.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Completion Tokens'
+      TabOrder = 5
+    end
+    object lbCompletionTokens: TLabel
+      Position.X = 347.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 13
+    end
+    object Label12: TLabel
+      Position.X = 388.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Total Tokens'
+      TabOrder = 6
+    end
+    object lbTotalTokens: TLabel
+      Position.X = 462.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 14
+    end
+  end
+  object Label13: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Trimming = None
+    Text = 'Mistral'
+    TabOrder = 2
+  end
+  object edMistral: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 81.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 550.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

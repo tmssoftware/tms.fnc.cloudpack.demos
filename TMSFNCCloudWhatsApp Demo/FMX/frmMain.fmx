@@ -1,0 +1,99 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'TTMSFNCCloudWhatsApp Demo'
+  ClientHeight = 422
+  ClientWidth = 516
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object OpenDialog1: TOpenDialog
+    Left = 280
+    Top = 216
+  end
+  object Token: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 3
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Access Token'
+  end
+  object ID: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 4
+    Position.X = 8.000000000000000000
+    Position.Y = 41.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Phone Number ID'
+  end
+  object recipient: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 5
+    Position.X = 8.000000000000000000
+    Position.Y = 296.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Recipient'#39's phone number'
+  end
+  object TextMessage: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Hi,'
+      ''
+      'Welcome to the TTMSFNCCloudWhatsAppComponent. '
+      
+        'Find our other components and packs at https://www.tmssoftware.c' +
+        'om/')
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 8.000000000000000000
+    Position.Y = 74.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 214.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Viewport.Width = 496.000000000000000000
+    Viewport.Height = 210.000000000000000000
+  end
+  object SendText: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 8.000000000000000000
+    Position.Y = 326.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Send text message'
+    OnClick = SendTextClick
+  end
+  object SendImage: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 8.000000000000000000
+    Position.Y = 356.000000000000000000
+    Size.Width = 500.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Pick and send image'
+    OnClick = SendImageClick
+  end
+  object TMSFNCCloudWhatsApp1: TTMSFNCCloudWhatsApp
+    Size.Width = 39.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 208.000000000000000000
+    Position.Y = 217.000000000000000000
+    OnError = TMSFNCCloudWhatsApp1Error
+    OnSendSuccess = TMSFNCCloudWhatsApp1SendSuccess
+  end
+end

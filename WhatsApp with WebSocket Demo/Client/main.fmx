@@ -1,0 +1,225 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'TTMSFNCCloudWhatsApp with WebSocket'
+  ClientHeight = 616
+  ClientWidth = 716
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 456.000000000000000000
+    Position.Y = 157.000000000000000000
+    Size.Width = 252.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Viewport.Width = 248.000000000000000000
+    Viewport.Height = 229.000000000000000000
+  end
+  object Conversations: TListBox
+    Anchors = [akLeft, akTop, akBottom]
+    Enabled = False
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 12.000000000000000000
+    Position.Y = 157.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 444.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    OnClick = ConversationsClick
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 440.000000000000000000
+  end
+  object TMSFNCWhatsAppReceiver1: TTMSFNCWhatsAppReceiver
+    Size.Width = 39.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 617.000000000000000000
+    Position.Y = 293.000000000000000000
+    Port = 0
+    OnConnect = TMSFNCWhatsAppReceiver1Connect
+    OnWhatsAppMessageReceived = TMSFNCWhatsAppReceiver1WhatsAppMessageReceived
+  end
+  object TMSFNCCloudWhatsApp1: TTMSFNCCloudWhatsApp
+    Size.Width = 39.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Position.X = 617.000000000000000000
+    Position.Y = 246.000000000000000000
+    OnError = TMSFNCCloudWhatsApp1Error
+    OnSendSuccess = TMSFNCCloudWhatsApp1SendSuccess
+    OnDownloadFileSuccess = TMSFNCCloudWhatsApp1DownloadFileSuccess
+  end
+  object Messages: TListBox
+    Anchors = [akLeft, akTop, akBottom]
+    Enabled = False
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 219.000000000000000000
+    Position.Y = 157.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 444.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    OnClick = MessagesClick
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 229.000000000000000000
+    Viewport.Height = 440.000000000000000000
+  end
+  object Panel1: TPanel
+    Align = MostTop
+    Size.Width = 716.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object APIKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 0
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 573.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'API Key'
+    end
+    object PhoneNumberID: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 1
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 573.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Phone Number ID'
+    end
+    object Host: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 2
+      Position.X = 8.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 252.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Host'
+    end
+    object Path: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akRight]
+      TabOrder = 3
+      Position.X = 268.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 215.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Path Name'
+    end
+    object Port: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akRight]
+      TabOrder = 4
+      Position.X = 491.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Port'
+    end
+    object Connect: TButton
+      Anchors = [akTop, akRight, akBottom]
+      Position.X = 589.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 119.000000000000000000
+      Size.Height = 112.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Connect'
+      OnClick = ConnectClick
+    end
+  end
+  object Reply: TButton
+    Anchors = [akLeft, akRight, akBottom]
+    Enabled = False
+    Position.X = 456.000000000000000000
+    Position.Y = 563.000000000000000000
+    Size.Width = 252.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Reply'
+    OnClick = ReplyClick
+  end
+  object DownloadMedia: TButton
+    Anchors = [akLeft, akRight, akBottom]
+    Enabled = False
+    Position.X = 456.000000000000000000
+    Position.Y = 398.000000000000000000
+    Size.Width = 252.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Download File'
+    OnClick = DownloadMediaClick
+  end
+  object Label1: TLabel
+    Position.X = 12.000000000000000000
+    Position.Y = 137.000000000000000000
+    Size.Width = 199.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Conversations'
+    TabOrder = 13
+  end
+  object Label2: TLabel
+    Position.X = 219.000000000000000000
+    Position.Y = 137.000000000000000000
+    Size.Width = 229.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Messages'
+    TabOrder = 12
+  end
+  object Label3: TLabel
+    Position.X = 456.000000000000000000
+    Position.Y = 137.000000000000000000
+    Size.Width = 316.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Content'
+    TabOrder = 11
+  end
+  object Memo2: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Anchors = [akLeft, akRight, akBottom]
+    Enabled = False
+    Position.X = 456.000000000000000000
+    Position.Y = 451.000000000000000000
+    Size.Width = 252.000000000000000000
+    Size.Height = 104.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+    Viewport.Width = 248.000000000000000000
+    Viewport.Height = 100.000000000000000000
+  end
+end

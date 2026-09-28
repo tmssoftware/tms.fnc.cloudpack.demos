@@ -1,0 +1,486 @@
+object Form5: TForm5
+  Left = 0
+  Top = 0
+  Caption = 'TTMSFNCCloudMailChimpMarketing Demo'
+  ClientHeight = 512
+  ClientWidth = 684
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 684.000000000000000000
+    Size.Height = 479.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 6
+    TabPosition = PlatformDefault
+    Sizes = (
+      684s
+      453s
+      684s
+      453s
+      684s
+      453s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 75.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Audiences'
+      ExplicitSize.cx = 75.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object AddNewList: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 345.000000000000000000
+        Size.Width = 71.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 15
+        Text = 'Add'
+        OnClick = AddNewListClick
+      end
+      object AdressEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 10
+        Position.X = 224.000000000000000000
+        Position.Y = 135.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Adress'
+      end
+      object CityEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 8
+        Position.X = 224.000000000000000000
+        Position.Y = 165.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'City'
+      end
+      object CompanyEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 11
+        Position.X = 224.000000000000000000
+        Position.Y = 105.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Company'
+      end
+      object CountryEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 9
+        Position.X = 224.000000000000000000
+        Position.Y = 227.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Country'
+      end
+      object DeleteList: TButton
+        Position.X = 166.000000000000000000
+        Position.Y = 345.000000000000000000
+        Size.Width = 71.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 13
+        Text = 'Delete'
+        OnClick = DeleteListClick
+      end
+      object FromEmailEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Position.X = 224.000000000000000000
+        Position.Y = 75.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Email'
+      end
+      object FromNameEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 224.000000000000000000
+        Position.Y = 45.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Name'
+      end
+      object LanguageEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 224.000000000000000000
+        Position.Y = 257.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Language'
+      end
+      object ListNameEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 17
+        Position.X = 224.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'List name'
+      end
+      object ListsListBox: TListBox
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 208.000000000000000000
+        Size.Height = 329.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 16
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        OnChange = ListsListBoxChange
+        Viewport.Width = 204.000000000000000000
+        Viewport.Height = 325.000000000000000000
+      end
+      object PermissionReminderEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 12
+        Position.X = 224.000000000000000000
+        Position.Y = 287.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Permission Reminder'
+      end
+      object SubjectEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Position.X = 224.000000000000000000
+        Position.Y = 317.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Subject'
+      end
+      object TMSFNCCloudMailChimpMarketing1: TTMSFNCCloudMailChimpMarketing
+        Size.Width = 39.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 626.000000000000000000
+        Position.Y = 347.000000000000000000
+        OnGetLists = TMSFNCCloudMailChimpMarketing1GetLists
+        OnAddList = TMSFNCCloudMailChimpMarketing1AddList
+        OnUpdateList = TMSFNCCloudMailChimpMarketing1UpdateList
+        OnDeleteList = TMSFNCCloudMailChimpMarketing1DeleteList
+        OnGetMembers = TMSFNCCloudMailChimpMarketing1GetMembers
+        OnAddMember = TMSFNCCloudMailChimpMarketing1AddMember
+        OnUpdateMember = TMSFNCCloudMailChimpMarketing1UpdateMember
+        OnArchiveMember = TMSFNCCloudMailChimpMarketing1ArchiveMember
+        OnDeleteMember = TMSFNCCloudMailChimpMarketing1DeleteMember
+        OnGetCampaigns = TMSFNCCloudMailChimpMarketing1GetCampaigns
+        OnAddCampaign = TMSFNCCloudMailChimpMarketing1AddCampaign
+        OnUpdateCampaignSettings = TMSFNCCloudMailChimpMarketing1UpdateCampaignSettings
+        OnDeleteCampaign = TMSFNCCloudMailChimpMarketing1DeleteCampaign
+        OnSendCampaign = TMSFNCCloudMailChimpMarketing1SendCampaign
+        OnGetCampaignContent = TMSFNCCloudMailChimpMarketing1GetCampaignContent
+        OnSetCampaignContent = TMSFNCCloudMailChimpMarketing1SetCampaignContent
+        OnError = TMSFNCCloudMailChimpMarketing1Error
+      end
+      object UpdateList: TButton
+        Position.X = 87.000000000000000000
+        Position.Y = 345.000000000000000000
+        Size.Width = 71.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 14
+        Text = 'Update'
+        OnClick = UpdateListClick
+      end
+      object ZipEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 18
+        Position.X = 224.000000000000000000
+        Position.Y = 195.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Zip'
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 49.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Users'
+      ExplicitSize.cx = 49.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object AddMemberButton: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 367.000000000000000000
+        TabOrder = 25
+        Text = 'Add'
+        OnClick = AddMemberButtonClick
+      end
+      object CurrentPageButton: TButton
+        Position.X = 577.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 28
+        Text = 'Current page'
+        OnClick = CurrentPageButtonClick
+      end
+      object DeleteMemberButton: TButton
+        Position.X = 577.000000000000000000
+        Position.Y = 367.000000000000000000
+        TabOrder = 24
+        Text = 'Delete'
+        OnClick = DeleteMemberButtonClick
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 23
+        Position.X = 3.000000000000000000
+        Position.Y = 337.000000000000000000
+        Size.Width = 654.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object FirstPageButton: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 29
+        Text = 'First Page'
+        OnClick = FirstPageButtonClick
+      end
+      object ListBox2: TListBox
+        Position.X = 1.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 656.000000000000000000
+        Size.Height = 289.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 22
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 652.000000000000000000
+        Viewport.Height = 285.000000000000000000
+      end
+      object NextPageButton: TButton
+        Position.X = 336.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 27
+        Text = 'Next Page'
+        OnClick = NextPageButtonClick
+      end
+      object PreviousPageButton: TButton
+        Position.X = 248.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 30
+        Text = 'Previous page'
+        OnClick = PreviousPageButtonClick
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 79.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Campaigns'
+      ExplicitSize.cx = 79.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object ListBox1: TListBox
+        Position.X = 3.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 213.000000000000000000
+        Size.Height = 369.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        OnChange = ListBox1Change
+        Viewport.Width = 209.000000000000000000
+        Viewport.Height = 365.000000000000000000
+      end
+      object ContentMemo: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Position.X = 224.000000000000000000
+        Position.Y = 225.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 184.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 32
+        Viewport.Width = 445.000000000000000000
+        Viewport.Height = 180.000000000000000000
+      end
+      object SendCampaignButton: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 417.000000000000000000
+        Size.Width = 213.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 20
+        Text = 'Send Campaign'
+        OnClick = SendCampaignButtonClick
+      end
+      object AddCampaign: TButton
+        Enabled = False
+        Position.X = 344.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 35
+        Text = 'Add Campaign'
+        OnClick = AddCampaignClick
+      end
+      object Title: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 40
+        Position.X = 224.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Title'
+      end
+      object FromName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 39
+        Position.X = 224.000000000000000000
+        Position.Y = 130.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'From Name'
+      end
+      object ReplyTo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 38
+        Position.X = 224.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Reply To'
+      end
+      object PreviewText: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 37
+        Position.X = 224.000000000000000000
+        Position.Y = 100.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Preview Text'
+      end
+      object SubjectLine: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 36
+        Position.X = 224.000000000000000000
+        Position.Y = 70.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Subject Line'
+      end
+      object StatusLabel: TLabel
+        Position.X = 224.000000000000000000
+        Position.Y = 190.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Status: '
+        TabOrder = 41
+      end
+      object SaveCampaignContent: TButton
+        Position.X = 224.000000000000000000
+        Position.Y = 417.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 42
+        Text = 'Save Content'
+        OnClick = SaveCampaignContentClick
+      end
+      object UpdateCampaign: TButton
+        Enabled = False
+        Position.X = 568.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 34
+        Text = 'Update Campaign'
+        OnClick = AddCampaignClick
+      end
+      object NewCampaign: TButton
+        Position.X = 224.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 33
+        Text = 'New Campaign'
+        OnClick = NewCampaignClick
+      end
+    end
+  end
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 684.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object APIKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 0
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Size.Width = 459.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'API Key'
+    end
+    object ConnectButton: TButton
+      Align = Right
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 468.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Connect'
+      OnClick = ConnectButtonClick
+    end
+  end
+end

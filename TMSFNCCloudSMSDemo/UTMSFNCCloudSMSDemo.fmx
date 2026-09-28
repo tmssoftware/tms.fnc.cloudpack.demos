@@ -1,0 +1,158 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'TMS FNC Cloud Pack SMS Demo'
+  ClientHeight = 385
+  ClientWidth = 535
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 535.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object edAPIKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 144.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'API Key'
+      TabOrder = 7
+    end
+    object TMSFNCCloudSMS1: TTMSFNCCloudSMS
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 16.000000000000000000
+      Position.Y = 239.000000000000000000
+      OnSendCloudSMS = TMSFNCCloudSMS1SendCloudSMS
+      CloudSMSRequests = <>
+    end
+    object Label5: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Client ID'
+      TabOrder = 6
+    end
+    object edClientID: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 144.000000000000000000
+      Position.Y = 75.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label6: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Secret'
+      TabOrder = 3
+    end
+    object edSecret: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 144.000000000000000000
+      Position.Y = 107.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object cbService: TComboBox
+      Items.Strings = (
+        'BulkSMS'
+        'InfoBip'
+        'Spryng'
+        'Twilio')
+      ItemIndex = 0
+      Position.X = 144.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      OnChange = cbServiceChange
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Service'
+      TabOrder = 2
+    end
+  end
+  object meText: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Hello World!')
+    Position.X = 144.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 337.000000000000000000
+    Viewport.Height = 145.000000000000000000
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Text'
+    TabOrder = 3
+  end
+  object btSend: TButton
+    Position.X = 144.000000000000000000
+    Position.Y = 352.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Send SMS'
+    OnClick = btSendClick
+  end
+  object edTo: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Position.X = 144.000000000000000000
+    Position.Y = 160.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label4: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 160.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'To Telephone Number'
+    TabOrder = 1
+  end
+end

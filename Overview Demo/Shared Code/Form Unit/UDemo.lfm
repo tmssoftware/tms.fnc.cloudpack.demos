@@ -1,0 +1,10 @@
+object Form1: TForm1
+  Left = 96
+  Height = 600
+  Top = 365
+  Width = 1250
+  Caption = 'TMS FNC Cloud Demo'
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.8.2.0'
+end
